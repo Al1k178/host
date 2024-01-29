@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stle.css">
+    <link rel="stylesheet" href="tabela.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>PiłkaLigowa</title>
+</head>
+
+<body>
+    <div class="banner" id="home">
+        <div class="navbar">
+            <img class="logo" src="foto/pilka2.jpg" alt="logo">
+            <div class="openMenu"><i class="fa-solid fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li> <a href="#home"> home</a></li>
+
+                <li> <a href="#ligi"> ligi</a></li>
+                <li> <a href="#ABOUT"> ABOUT </a></li>
+                <li> <a href="#CONTACT"> CONTACT</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Witajcie!</h1>
+            <p>Z pewnością wielu z was jest zainteresowanych piłką nożną. Ja również pasjonuję się tym sportem i
+                postanowiłem utworzyć stronę internetową, która umożliwi Wam śledzenie bieżących wyników ligi.</p>
+        </div>
+
+    </div>
+
+    <div class="ligi" id="ligi">
+        <div class="text">
+            <h1>Wybierz jedna z lig aby zobaczyc wyniki</h1>
+        </div>
+        
+
+
+        <ul>
+            <li>
+                <img src="foto/premir liga anglia.png" alt="premierliga logo"> <br>Premier League
+                <div id="tab_div">
+                    <form class="filterForm" id="filterForm_ANG">
+                        <label for="minPoints_ANG">Minimalna liczba punktów:</label>
+                        <input type="number" id="minPoints_ANG" name="minPoints" min="0">
+                        <button type="button" onclick="filterResults('table-body_ANG', 'minPoints_ANG')">Filtruj</button>
+                    </form>
+                    <h2>Tabela Ligowa</h2>
+
+                    <table id="league-table">
+                        <thead>
+                            <tr class="tab">
+                                <th>Miejsce</th>
+                                <th>Zespół</th>
+                                <th>Punkty</th>
+                                <th>Mecze</th>
+                                <th>Różnica bramek</th>
+                                <th>Gole zdobyte</th>
+                                <th>Gole stracone</th>
+                                <th>Przegrane</th>
+                                <th>Remisy</th>
+                                <th>Wygrane</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body_ANG">
+
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            <li> <img src="foto/Bundesliga niemcy.png" alt="bundesliga logo"> <br>Bundesliga
+                <div id="tab_div">
+                    <form class="filterForm" id="filterForm_GER">
+                        <label for="minPoints_GER">Minimalna liczba punktów:</label>
+                        <input type="number" id="minPoints_GER" name="minPoints" min="0">
+                        <button type="button" onclick="filterResults('table-body_GER', 'minPoints_GER')">Filtruj</button>
+                    </form>
+                    <h2>Tabela Ligowa</h2>
+
+                    <table id="league-table">
+                        <thead>
+                            <tr class="tab">
+                                <th>Miejsce</th>
+                                <th>Zespół</th>
+                                <th>Punkty</th>
+                                <th>Mecze</th>
+                                <th>Różnica bramek</th>
+                                <th>Gole zdobyte</th>
+                                <th>Gole stracone</th>
+                                <th>Przegrane</th>
+                                <th>Remisy</th>
+                                <th>Wygrane</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body_GER">
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </li>
+            <li> <img src="foto/SerieA wlochy.png" alt="seria A logo"> <br>Serie A
+                <div id="tab_div">
+                    <form class="filterForm" id="filterForm_ITL">
+                        <label for="minPoints_ITL">Minimalna liczba punktów:</label>
+                        <input type="number" id="minPoints_ITL" name="minPoints" min="0">
+                        <button type="button" onclick="filterResults('table-body_ITL', 'minPoints_ITL')">Filtruj</button>
+                    </form>
+                    <h2>Tabela Ligowa</h2>
+
+                    <table id="league-table">
+                        <thead>
+                            <tr class="tab">
+                                <th>Miejsce</th>
+                                <th>Zespół</th>
+                                <th>Punkty</th>
+                                <th>Mecze</th>
+                                <th>Różnica bramek</th>
+                                <th>Gole zdobyte</th>
+                                <th>Gole stracone</th>
+                                <th>Przegrane</th>
+                                <th>Remisy</th>
+                                <th>Wygrane</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body_ITL">
+
+                        </tbody>
+                    </table>
+
+            </li>
+            <li> <img src="foto/Ligue1 francja.png" alt="lige 1 logo"> <br>Ligue 1
+                <div id="tab_div">
+                    <form class="filterForm" id="filterForm_FR">
+                        <label for="minPoints_FR">Minimalna liczba punktów:</label>
+                        <input type="number" id="minPoints_FR" name="minPoints" min="0">
+                        <button type="button" onclick="filterResults('table-body_FR', 'minPoints_FR')">Filtruj</button>
+                    </form>
+                    <h2>Tabela Ligowa</h2>
+
+                    <table id="league-table">
+                        <thead>
+                            <tr class="tab">
+                                <th>Miejsce</th>
+                                <th>Zespół</th>
+                                <th>Punkty</th>
+                                <th>Mecze</th>
+                                <th>Różnica bramek</th>
+                                <th>Gole zdobyte</th>
+                                <th>Gole stracone</th>
+                                <th>Przegrane</th>
+                                <th>Remisy</th>
+                                <th>Wygrane</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body_FR">
+
+                        </tbody>
+                    </table>
+
+            </li>
+            <li> <img src="foto/LAliga hiszpania.png" alt="laliga logo"><br>LaLiga
+                <div id="tab_div">
+                    <form class="filterForm" id="filterForm_ESP">
+                        <label for="minPoints_ESP">Minimalna liczba punktów:</label>
+                        <input type="number" id="minPoints_ESP" name="minPoints" min="0">
+                        <button type="button" onclick="filterResults('table-body_ESP', 'minPoints_ESP')">Filtruj</button>
+                    </form>
+                    <h2>Tabela Ligowa</h2>
+
+                    <table id="league-table">
+                        <thead>
+                            <tr class="tab">
+                                <th>Miejsce</th>
+                                <th>Zespół</th>
+                                <th>Punkty</th>
+                                <th>Mecze</th>
+                                <th>Różnica bramek</th>
+                                <th>Gole zdobyte</th>
+                                <th>Gole stracone</th>
+                                <th>Przegrane</th>
+                                <th>Remisy</th>
+                                <th>Wygrane</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body_ESP">
+
+                        </tbody>
+                    </table>
+
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+    
+    
+    <div class="content1" id="ABOUT">
+        <h1>Witajcie!</h1>
+        <p>Witajcie na naszej stronie poświęconej pasji do piłki nożnej! Jesteśmy zespołem entuzjastów tego sportu, którzy postanowili stworzyć miejsce, gdzie można śledzić najnowsze wyniki, analizy i wydarzenia związane z piłką nożną.</p>
+        <p>Naszym celem jest dostarczenie Wam aktualnych informacji o ligach piłkarskich, prezentacja tabel ligowych, statystyk drużyn oraz fascynujących momentów ze świata futbolu. Niezależnie od tego, czy jesteś fanem Premier League, Bundesliga, Serie A, Ligue 1 czy LaLiga - znajdziesz tutaj to, co Cię interesuje.</p>
+        <p>Dołącz do naszej społeczności piłkarskiej i ciesz się emocjami związanymi z tym wspaniałym sportem!</p>
+    </div>
+    
+
+    <footer>
+        <div class="footerContainer" id="CONTACT">
+            <div class="social">
+                <a href="https://www.instagram.com/aleksander__k__/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/aleks.kret.56/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.ur.edu.pl/pl/"><i class="fa-solid fa-school"></i></a>
+
+            </div>
+            <div class="footerNav">
+                <ul>
+
+                    <li><a href="#home"> Home</a> </li>
+
+                    <li><a href="mailto:kreta.ak@gmail.com"> Email</a></li>
+                    <li><a href="#ABOUT"> ABOUT </a></li>
+                    <li><a href="#CONTACT"> CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <p>Uniwersytet Rzeszowski 2024; Aleksander Kret</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="tabela.js">  </script>
+    <script src="menu_mob.js"></script>
+
+
+    <script>
+        function filterResults(tableId, minPointsInputId) {
+            var minPointsInput = document.getElementById(minPointsInputId);
+            var minPoints = parseInt(minPointsInput.value);
+
+            var tableBody = document.getElementById(tableId);
+
+            var rows = tableBody.querySelectorAll('tr');
+
+            rows.forEach(function (row) {
+                var pointsCell = row.querySelector('td:nth-child(3)'); // Kolumna z punktami
+
+                if (pointsCell) {
+                    var points = parseInt(pointsCell.textContent);
+
+                    if (points >= minPoints) {
+                        row.style.display = 'table-row';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

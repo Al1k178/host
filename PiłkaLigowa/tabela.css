@@ -1,0 +1,117 @@
+
+#tab_div {
+  display: none;
+}
+
+#league-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-right: 100%;
+  padding-right: 20%;
+
+  font-size: 100%;
+}
+
+
+
+
+
+#league-table th,
+#league-table td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 0.5%;
+
+  color: white;
+}
+
+#league-table td:nth-child(3) {
+  background-color: #972727;
+}
+
+#league-table td {
+  width: 19vh;
+  margin-right: 5px;
+  
+}
+
+
+
+#league-table thead {
+  background-color: #333;
+  
+}
+
+#league-table tbody tr:nth-child(even) {
+  background-color: #4b4b4b;
+  
+}
+
+#league-table tbody tr:hover {
+  background-color: #ff0000;
+  
+}
+
+
+
+
+.filterForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filterForm label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.filterForm input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filterForm button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  
+}
+
+.filterForm button:hover {
+  background-color: #45a049;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  #league-table {
+
+    margin-top: 10px;
+    margin-right: 0px;
+   
+    font-size: 6px;
+
+  }
+
+  #league-table th,
+  #league-table td {
+    padding: 5px; /* Zmniejsz srodek komórek */
+    
+  }
+
+
+  #table-body td {
+    
+    overflow: hidden;/* jak za dluga nie wyswietla poza granica,i */
+    
+    
+  }
+
+}
